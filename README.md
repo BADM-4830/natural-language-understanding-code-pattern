@@ -10,7 +10,35 @@
 </p>
 </p>
 
-Demo: https://natural-language-understanding-code-pattern.ng.bluemix.net/
+Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](https://natural-language-understanding-code-pattern.ng.bluemix.net/)
+
+<h3>BADM-4830</h3>
+</p>
+
+1. login to VM on AWS cloud
+
+	 `
+    ssh ubuntu@XX.XXX.XXX.XXX
+    `
+    
+    *Make sure to post your **ssh public key** to Watson studio project
+    
+2. Navigate to class subdirectory
+
+	`cd /home/ubuntu/4830`
+3. Create & navigate to your own directory
+
+	`mkdir userName`
+	
+	`cd userName`
+4. Clone NLU repository from github
+
+	`git clone git@github.com:BADM-4830/natural-language-understanding-code-pattern.git`
+	
+5. Change directory to NLU directory
+
+	`cd natural-language-understanding-code-pattern/`
+
 
 ### Flow
 
