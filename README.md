@@ -160,13 +160,20 @@ Click on the button below to deploy this demo to the IBM Cloud.
    ibmcloud login
    ```
 
-1. Target a Cloud Foundry organization and space.
+1. Target a Cloud Foundry organization and space & Target a Resource Group with
 
    ```
    ibmcloud target --cf
+   ibmcloud target -g Default
    ```
 
 1. Edit the _manifest.yml_ file. Change the **name** field to something unique. For example, `- name: my-app-name`.
+2. Edit the _manifest.yml_ file. Change the **buildpacks** field to:
+
+	``` 
+		buildpacks:
+      		- nodejs_buildpack
+    ```
 1. Deploy the application
 
    ```
