@@ -43,16 +43,13 @@ Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](http
 	`cp .env.example .env`
 7. Remember to update the following configuration variables in `.env` once you have created your `Watson NLU` instance on the IBM cloud.
 
-	`NATURAL_LANGUAGE_UNDERSTANDING_APIKEY`=`<COPY-YOUR-API-KEY-HERE> `
-	</p>`NATURAL_LANGUAGE_UNDERSTANDING_URL`=`https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/*********`
-	</p>`PORT`=`5001`
+```
+	NATURAL_LANGUAGE_UNDERSTANDING_APIKEY=<COPY-YOUR-API-KEY-HERE>
+	NATURAL_LANGUAGE_UNDERSTANDING_URL=https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/*********
+	PORT=5001
+```
 
 
-	with your favorite text editor
-	
-	`
-		vi .env
-	`
 
 ### Flow
 
@@ -111,11 +108,12 @@ The recommended approach is to download the credentials file and place it in the
 
 2.  Open the _.env_ file and add the service credentials depending on your environment.
 
-    Example _.env_ file that configures the `apikey` and `url` for a Natural Language Understanding service instance hosted in the US East region:
+    Example _.env_ file that configures the `apikey` and `url` for a Natural Language Understanding service instance hosted in the US South region:
 
     ```
     NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY=X4rbi8vwZmKpXfowaS3GAsA7vdy17Qh7km5D6EzKLHL2
-    NATURAL_LANGUAGE_UNDERSTANDING_URL=https://api.us-east.natural-language-understanding.watson.cloud.ibm.com/
+    NATURAL_LANGUAGE_UNDERSTANDING_URL=https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/XXXXXXXX
+    PORT=XXXX
     ```
 
 </details>
