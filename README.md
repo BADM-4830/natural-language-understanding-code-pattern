@@ -12,6 +12,16 @@
 
 Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](https://natural-language-understanding-code-pattern.ng.bluemix.net/)
 
+### Flow
+
+<p align="center">
+  <img alt="architecture" width="600" src="./public/architecture.png">
+</p>
+
+1. User sends messages to the application (running locally, in the IBM Cloud or in IBM Cloud Pak for Data).
+1. The application sends the user message to IBM Watson Natural Language Understanding service.
+1. Watson Natural Language Understanding processes the text or url and extract features such us keywords, concepts, categories. The service can be provisioned on either IBM Cloud or IBM Cloud Pak for Data.
+
 <h3>BADM-4830</h3>
 </p>
 
@@ -31,6 +41,14 @@ Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](http
 	`mkdir userName`
 	
 	`cd userName`
+	
+	For example:
+	
+	`mkdir ivanp`
+	
+	`cd ivanp`
+	
+	
 4. Clone NLU repository from github
 
 	`git clone https://github.com/BADM-4830/natural-language-understanding-code-pattern.git`
@@ -51,15 +69,7 @@ Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](http
 
 
 
-### Flow
 
-<p align="center">
-  <img alt="architecture" width="600" src="./public/architecture.png">
-</p>
-
-1. User sends messages to the application (running locally, in the IBM Cloud or in IBM Cloud Pak for Data).
-1. The application sends the user message to IBM Watson Natural Language Understanding service.
-1. Watson Natural Language Understanding processes the text or url and extract features such us keywords, concepts, categories. The service can be provisioned on either IBM Cloud or IBM Cloud Pak for Data.
 
 
 
@@ -114,9 +124,6 @@ where `XX.XXX.XXX.XXX` is the IP we used in the login step above and `PORT` is t
 
 ## Deploying to IBM Cloud as a Cloud Foundry Application
 
-Click on the button below to deploy this demo to the IBM Cloud.
-
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern)
 
 ### Manually
 
@@ -139,7 +146,10 @@ Click on the button below to deploy this demo to the IBM Cloud.
    ibmcloud target -g Default
    ```
 
-1. Edit the _manifest.yml_ file. Change the **name** field to something unique. For example, `- name: my-app-name`.
+1. Edit the _manifest.yml_ file. Change the **name** field to something unique. For example, 
+
+	`- name: my-app-name`
+	
 2. Edit the _manifest.yml_ file. Change the **buildpacks** field to:
 
 	``` 
@@ -169,11 +179,7 @@ Click on the button below to deploy this demo to the IBM Cloud.
    - Copy the `url` value.
 
 
-## Configuring the application
 
-Depending on where your service instance is you may have different ways to download the credentials file.
-
-> Need more information? See the [authentication wiki](https://github.com/IBM/node-sdk-core/blob/master/AUTHENTICATION.md).
 
 
 ## Directory structure
