@@ -88,12 +88,12 @@ Configure the authentication manually
 
 2.  Open the _.env_ file and add the service credentials depending on your environment.
 
-    Example _.env_ file that configures the `apikey` and `url` for a Natural Language Understanding service instance hosted in the US South region:
+    Example _.env_ file that configures the `apikey`, `PORT` and `url` for a Natural Language Understanding service instance hosted in the US South region, running on port `5000`:
 
     ```
     NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY=X4rbi8vwZmKpXfowaS3GAsA7vdy17Qh7km5D6EzKLHL2
     NATURAL_LANGUAGE_UNDERSTANDING_URL=https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/XXXXXXXX
-    PORT=XXXX
+    PORT=5000
     ```
 
 
