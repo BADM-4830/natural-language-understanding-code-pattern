@@ -33,7 +33,7 @@ Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](http
 	`cd userName`
 4. Clone NLU repository from github
 
-	`git clone git@github.com:BADM-4830/natural-language-understanding-code-pattern.git`
+	`git clone https://github.com/BADM-4830/natural-language-understanding-code-pattern.git`
 	
 5. Change directory to NLU directory
 
@@ -61,44 +61,14 @@ Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](http
 1. The application sends the user message to IBM Watson Natural Language Understanding service.
 1. Watson Natural Language Understanding processes the text or url and extract features such us keywords, concepts, categories. The service can be provisioned on either IBM Cloud or IBM Cloud Pak for Data.
 
-## Prerequisites
 
-### Public Cloud
-
-1. Sign up for an [IBM Cloud account](https://console.bluemix.net/registration/).
-1. Download the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#overview).
-1. Create an instance of the Natural Language Understanding service and get your credentials:
-   - Go to the [Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding) page in the IBM Cloud Catalog.
-   - Log in to your IBM Cloud account.
-   - Click **Create**.
-   - Click **Show** to view the service credentials.
-   - Copy the `apikey` value.
-   - Copy the `url` value.
-
-
-## Configuring the application
-
-Depending on where your service instance is you may have different ways to download the credentials file.
-
-> Need more information? See the [authentication wiki](https://github.com/IBM/node-sdk-core/blob/master/AUTHENTICATION.md).
-
-### Automatically
-
-Copy the credential file to the application folder.
-
-
-**Public Cloud**
-
-<p align="center">
-  <img alt="public"  width="600" src="https://watson-developer-cloud.github.io/images/credentials-public.png">
-</p>
 
 ### Manual deployment
 
 The recommended approach is to download the credentials file and place it in the directory where you code is. Follow the following steps only if you want to manually configure your authentication mechanism.
 
-<details>
-<summary>Configure the authentication manually</summary>
+
+Configure the authentication manually
 
 1.  In the application folder, copy the _.env.example_ file and create a file called _.env_
 
@@ -116,7 +86,7 @@ The recommended approach is to download the credentials file and place it in the
     PORT=XXXX
     ```
 
-</details>
+
 
 ## Running locally
 
@@ -138,7 +108,9 @@ The recommended approach is to download the credentials file and place it in the
    npm run dev
    ```
 
-1. View the application in a browser at `localhost:5000`
+1. View the application in a browser at `XX.XXX.XXX.XXX:PORT`
+
+where `XX.XXX.XXX.XXX` is the IP we used in the login step above and `PORT` is the port number provided in the `.env` file earlier.
 
 ## Deploying to IBM Cloud as a Cloud Foundry Application
 
@@ -182,32 +154,27 @@ Click on the button below to deploy this demo to the IBM Cloud.
 
 1. View the application online at the app URL, for example: https://my-app-name.mybluemix.net
 
+## Prerequisites
 
-## Tests
+### Public Cloud
 
-#### Unit tests
+1. Sign up for an [IBM Cloud account](https://console.bluemix.net/registration/).
+1. Download the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#overview).
+1. Create an instance of the Natural Language Understanding service and get your credentials:
+   - Go to the [Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding) page in the IBM Cloud Catalog.
+   - Log in to your IBM Cloud account.
+   - Click **Create**.
+   - Click **Show** to view the service credentials.
+   - Copy the `apikey` value.
+   - Copy the `url` value.
 
-Run unit tests with:
 
-```
-npm run test:components
-```
+## Configuring the application
 
-See the output for more info.
+Depending on where your service instance is you may have different ways to download the credentials file.
 
-#### Integration tests
+> Need more information? See the [authentication wiki](https://github.com/IBM/node-sdk-core/blob/master/AUTHENTICATION.md).
 
-First you have to make sure your code is built:
-
-```
-npm run build
-```
-
-Then run integration tests with:
-
-```
-npm run test:integration
-```
 
 ## Directory structure
 
