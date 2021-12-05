@@ -75,7 +75,7 @@ Demo: [https://natural-language-understanding-code-pattern.ng.bluemix.net/](http
 
 ### Manual deployment
 
-The recommended approach is to download the credentials file and place it in the directory where you code is. Follow the following steps only if you want to manually configure your authentication mechanism.
+Follow the following steps to manually configure your authentication mechanism.
 
 
 Configure the authentication manually
